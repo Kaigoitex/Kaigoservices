@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ITEX Telemarketing Services | Kai</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@tailwindcss/forms"></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITEX Telemarketing Services | Kai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
       }
-      .gradient-bg {
-        background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
-        background-size: 400% 400%;
-        animation: gradientShift 12s ease infinite;
+      50% {
+        background-position: 100% 50%;
       }
-      @keyframes gradientShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+      100% {
+        background-position: 0% 50%;
       }
-      .fade-up {
-        animation: fadeUp 1.2s ease both;
+    }
+    .fade-up {
+      animation: fadeUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      @keyframes fadeUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+    }
+    .pulse-logo {
+      animation: pulse 3s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
       }
-    </style>
-  </head>
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    section {
+      position: relative;
+    }
+    section.bg-shift {
+      transition: background-color 1s ease;
+    }
+  </style>
+</head>
 
-  <body class="text-gray-800 font-sans">
-    <!-- HEADER -->
-    <header class="gradient-bg text-white py-12 shadow-lg">
-      <div class="max-w-6xl mx-auto px-6 text-center fade-up">
-        <img
-          src="itex-logo (2).png"
-          alt="ITEX Logo"
-          class="mx-auto mb-4 w-32 h-auto drop-shadow-lg"
-        />
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">
-          ITEX Telemarketing Services by Kai
-        </h1>
-        <p class="text-xl font-medium opacity-90 max-w-2xl mx-auto">
-          Helping ITEX Brokers Build Membership & Growth Systems — the smart way to grow
-          your exchange, powered by human connection.
-        </p>
-      </div>
-    </header>
+<body class="text-gray-800 font-sans antialiased">
+  <!-- HEADER -->
+  <header class="gradient-bg text-white py-14 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <img
+        src="itex-logo (2).png"
+        alt="ITEX Logo"
+        class="mx-auto mb-4 w-32 h-auto drop-shadow-lg pulse-logo"
+      />
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight fade-up" style="animation-delay: 0.3s;">
+        ITEX Telemarketing Services by Kai
+      </h1>
+      <p class="text-xl font-medium opacity-90 max-w-2xl mx-auto fade-up" style="animation-delay: 0.6s;">
+        Helping ITEX Brokers Build Membership & Growth Systems — the smart way to grow
+        your exchange, powered by human connection.
+      </p>
+    </div>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
-      <!-- INTRO -->
-      <section class="text-center fade-up">
+  <main class="max-w-6xl mx-auto px-6 py-16 space-y-28">
+    <!-- INTRO -->
+    <section class="text-center">
+      <div class="fade-up" style="animation-delay: 0.4s;">
         <p class="text-xl leading-relaxed max-w-3xl mx-auto text-gray-700">
           We provide a <strong>turnkey lead generation and telemarketing system</strong> for ITEX Brokers who want consistent growth — without hiring full-time staff.
         </p>
@@ -72,107 +86,103 @@
           Our campaigns are proactive, creative, and laser-focused on the categories that
           bring you the highest-quality members.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- WHAT WE DO -->
-      <section class="fade-up">
-        <h2 class="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500">
-          🔹 What We Do
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8 text-lg">
-          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-            <h3 class="text-xl font-semibold mb-2 text-pink-600">🎯 Lead Generation</h3>
-            <p>We target and engage business owners in the categories you choose.</p>
-          </div>
-          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-            <h3 class="text-xl font-semibold mb-2 text-yellow-600">📞 40–50 Outbound Calls/Hour</h3>
-            <p>Proactive outreach that starts conversations and builds real interest.</p>
-          </div>
-          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-            <h3 class="text-xl font-semibold mb-2 text-blue-600">🧭 Prequalify Leads</h3>
-            <p>Each call filters for high-potential, decision-ready businesses.</p>
-          </div>
-          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-            <h3 class="text-xl font-semibold mb-2 text-green-600">📲 CRM Integration</h3>
-            <p>Warm and live leads added directly into your ITEX Team workspace.</p>
-          </div>
+    <!-- WHAT WE DO -->
+    <section class="bg-white rounded-2xl shadow-lg p-8" id="services">
+      <h2 class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 fade-up" style="animation-delay: 0.5s;">
+        🔹 What We Do
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="service-card bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.6s;">
+          <h3 class="text-xl font-semibold mb-2 text-pink-600">🎯 Lead Generation</h3>
+          <p>We target and engage business owners in the categories you choose.</p>
         </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section class="fade-up">
-        <h2 class="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500">
-          🔹 How It Works
-        </h2>
-        <ol class="space-y-4 text-lg bg-white p-8 rounded-2xl shadow-lg max-w-3xl mx-auto">
-          <li><strong>1.</strong> Pick your category focus — Auto, Retail, Restaurants, etc.</li>
-          <li><strong>2.</strong> Choose your schedule — minimum 10hrs/week for 6 months.</li>
-          <li><strong>3.</strong> Get live updates and CRM integration with every call.</li>
-          <li><strong>4.</strong> Grow your membership base with ready-to-join leads.</li>
-        </ol>
-      </section>
-
-      <!-- ADD-ONS -->
-      <section class="fade-up">
-        <h2 class="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">
-          🔹 Optional Add-ons
-        </h2>
-        <div class="grid md:grid-cols-2 gap-6 text-lg">
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-            • Category Pitch Page Creation  
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-            • Cold Call Script Development & Voice Training  
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-            • Shared KPI Dashboard & Lead Tracker Setup  
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-            • Trade Director Onboarding & Team Training  
-          </div>
+        <div class="service-card bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.7s;">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-600">📞 40–50 Outbound Calls/Hour</h3>
+          <p>Proactive outreach that starts conversations and builds real interest.</p>
         </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section class="fade-up">
-        <h2 class="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-teal-400">
-          💬 Testimonials
-        </h2>
-        <div class="space-y-6 max-w-4xl mx-auto">
-          <blockquote class="italic border-l-4 border-pink-500 bg-white p-6 rounded-2xl shadow-md">
-            “Kai’s system helped us bring in 10 new members in just a few months.
-            The structure, scripts, and follow-ups are all professional and easy to duplicate.”
-            <br />
-            <span class="not-italic font-semibold">— ITEX Broker, South Florida</span>
-          </blockquote>
-          <blockquote class="italic border-l-4 border-blue-500 bg-white p-6 rounded-2xl shadow-md">
-            “You can hand Kai a category and he’ll build the system from A to Z.”
-            <br />
-            <span class="not-italic font-semibold">— Regional Broker, Texas</span>
-          </blockquote>
+        <div class="service-card bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.8s;">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">🧭 Prequalify Leads</h3>
+          <p>Each call filters for high-potential, decision-ready businesses.</p>
         </div>
-      </section>
+        <div class="service-card bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.9s;">
+          <h3 class="text-xl font-semibold mb-2 text-green-600">📲 CRM Integration</h3>
+          <p>Warm and live leads added directly into your ITEX Team workspace.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- CALL TO ACTION -->
-      <section class="text-center py-10 fade-up">
-        <h2 class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-600">
-          🚀 Ready to Scale Your ITEX Growth?
-        </h2>
-        <p class="text-lg mb-8 text-gray-700">
-          Your next members are already out there — let’s start calling them.
-        </p>
+    <!-- HOW IT WORKS -->
+    <section class="bg-gray-50 rounded-2xl shadow-lg p-8" id="how-it-works">
+      <h2 class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 fade-up" style="animation-delay: 0.5s;">
+        🔹 How It Works
+      </h2>
+      <ol class="space-y-5 text-lg max-w-3xl mx-auto">
+        <li class="fade-up" style="animation-delay: 0.6s;"><strong>1.</strong> Pick your category focus — Auto, Retail, Restaurants, etc.</li>
+        <li class="fade-up" style="animation-delay: 0.7s;"><strong>2.</strong> Choose your schedule — minimum 10hrs/week for 6 months.</li>
+        <li class="fade-up" style="animation-delay: 0.8s;"><strong>3.</strong> Get live updates and CRM integration with every call.</li>
+        <li class="fade-up" style="animation-delay: 0.9s;"><strong>4.</strong> Grow your membership base with ready-to-join leads.</li>
+      </ol>
+    </section>
+
+    <!-- ADD-ONS -->
+    <section class="bg-white rounded-2xl shadow-lg p-8" id="add-ons">
+      <h2 class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 fade-up" style="animation-delay: 0.5s;">
+        🔹 Optional Add-ons
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6 text-lg">
+        <div class="addon-card bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.6s;">• Category Pitch Page Creation</div>
+        <div class="addon-card bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.7s;">• Cold Call Script Dev & Voice Training</div>
+        <div class="addon-card bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.8s;">• KPI Dashboard & Lead Tracker Setup</div>
+        <div class="addon-card bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-up" style="animation-delay: 0.9s;">• Trade Director Onboarding & Team Training</div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-gray-50 rounded-2xl shadow-lg p-8" id="testimonials">
+      <h2 class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-teal-400 fade-up" style="animation-delay: 0.5s;">
+        💬 Testimonials
+      </h2>
+      <div class="space-y-8 max-w-4xl mx-auto">
+        <blockquote class="italic border-l-4 border-pink-500 bg-white p-6 rounded-2xl shadow-md fade-up" style="animation-delay: 0.6s;">
+          “Kai’s system helped us bring in 10 new members in just a few months.
+          The structure, scripts, and follow-ups are all professional and easy to duplicate.”
+          <br />
+          <span class="not-italic font-semibold">— ITEX Broker, South Florida</span>
+        </blockquote>
+        <blockquote class="italic border-l-4 border-blue-500 bg-white p-6 rounded-2xl shadow-md fade-up" style="animation-delay: 0.7s;">
+          “You can hand Kai a category and he’ll build the system from A to Z.”
+          <br />
+          <span class="not-italic font-semibold">— Regional Broker, Texas</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="bg-white rounded-2xl shadow-lg p-12 text-center" id="cta">
+      <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-600 fade-up" style="animation-delay: 0.5s;">
+        🚀 Ready to Scale Your ITEX Growth?
+      </h2>
+      <p class="text-lg mb-8 text-gray-700 fade-up" style="animation-delay: 0.6s;">
+        Your next members are already out there — let’s start calling them.
+      </p>
+      <div class="fade-up" style="animation-delay: 0.7s;">
         <a
-          href="https://calendly.com/itex_broker/demo"
+          href="https://calendly.com/itex_broker/demo?month=2025-10"
           target="_blank"
-          class="inline-block bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-500 hover:scale-105 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-transform"
-          >📅 Book a Call with Barron</a
+          class="inline-block bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-500 hover:scale-105 text-white px-12 py-4 rounded-full text-lg font-semibold shadow-lg transition-transform"
         >
-      </section>
-    </main>
+          📅 Book a Call with Baron
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-100 py-8 text-center text-gray-600 text-sm">
-      <p>© 2025 ITEX Telemarketing Services by Kai. All rights reserved.</p>
-    </footer>
-  </body>
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-8 text-center text-gray-600 text-sm">
+    <p>© 2025 ITEX Telemarketing Services by Kai. All rights reserved.</p>
+  </footer>
+</body>
 </html>
